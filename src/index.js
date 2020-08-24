@@ -1,1 +1,1 @@
-alert('safa erden');
+//alert('safa erden');

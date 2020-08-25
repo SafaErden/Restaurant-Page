@@ -1,22 +1,44 @@
 const createForm = () => {
 	const menu = document.createElement('div');
 	menu.id = 'nav-menu';
-	menu.classList.add('tab-pane', 'fade');
+	menu.classList.add('tab-pane', 'show', 'active', 'fade');
 
 	const form = document.createElement('form');
-	return form;
+
+	const mailField = document.createElement('div');
+	mailField.classList.add('form-group', 'm-5');
+
+	const textField = document.createElement('div');
+	mailField.classList.add('form-group', 'm-5');
+
+	const address = document.createElement('kbd');
+	address.classList.add('h1');
+	address.innerText = '11 First Street, Çadırkaya, Tercan, ERZİNCAN 24';
+
+	const phone = document.createElement('kbd');
+	phone.classList.add('h1');
+	phone.innerText = '+90 267 987 6532';
+
+	mailField.appendChild(address);
+	textField.appendChild(phone);
+
+	form.appendChild(mailField);
+	form.appendChild(textField);
+	menu.appendChild(form);
+	return menu;
+
+	const group = document.createElement('div');
 };
 export default createForm;
 
 /*   <form>
             <div class="form-group">
-              <label for="exampleInputEmail1"><kbd>Email address</kbd></label>
+              <label for="exampleInputEmail1"><kbd>11 First Street, Çadırkaya, Tercan, ERZİNCAN 24</kbd></label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
             </div>
             <div class="form-group">
               <label for="texter"><kbd>Message</kbd></label>
               <textarea class="form-control" id="texter"  aria-label="With textarea" placeholder="Message"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" >Submit</button>
           </form>
           */

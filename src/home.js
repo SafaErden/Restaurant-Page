@@ -14,11 +14,6 @@ const createHome = () => {
 	const secondInfo = document.createElement('h2');
 	secondInfo.classList.add('p-3');
 
-	const secondInfoContent = document.createElement('kbd');
-	secondInfoContent.innerText = '11 First Street, Çadırkaya, Tercan, ERZİNCAN 24';
-
-	secondInfo.appendChild(secondInfoContent);
-
 	home.appendChild(firstInfo);
 	home.appendChild(secondInfo);
 

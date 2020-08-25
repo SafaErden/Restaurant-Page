@@ -1,7 +1,7 @@
 const createMenu = () => {
 	const menu = document.createElement('div');
 	menu.id = 'nav-menu';
-	menu.classList.add('tab-pane', 'fade');
+	menu.classList.add('tab-pane', 'show', 'fade', 'active');
 
 	const deck = document.createElement('div');
 	deck.classList.add('card-deck', 'mt-5');
@@ -35,7 +35,22 @@ const createMenu = () => {
 		itemImage.src = './assets/image/' + item.img + '.jpg';
 		itemImage.classList.add('card-img-top');
 
+		var cardBody = document.createElement('div');
+		cardBody.classList.add('card-body');
+
+		var cardTitle = document.createElement('h5');
+		cardTitle.classList.add('card-title');
+		cardTitle.innerText = item.title;
+
+		var cardInfo = document.createElement('p');
+		cardInfo.classList.add('card-text');
+		cardInfo.innerText = item.info;
+
+		cardBody.appendChild(cardTitle);
+		cardBody.appendChild(cardInfo);
+
 		deckItem.appendChild(itemImage);
+		deckItem.appendChild(cardBody);
 
 		deck.appendChild(deckItem);
 	});

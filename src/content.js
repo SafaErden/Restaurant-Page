@@ -1,12 +1,12 @@
-import createHome from './home.js';
-import createMenu from './menu.js';
-import createForm from './contact.js';
+import createHome from './home';
+import createMenu from './menu';
+import createForm from './contact';
 
 const createContent = () => {
-	const home = createHome();
-	const menu = createMenu();
-	const contact = createForm();
-	return [ home, menu, contact ];
+  const home = createHome();
+  const menu = createMenu();
+  const contact = createForm();
+  return [home, menu, contact];
 };
 
 export default createContent;

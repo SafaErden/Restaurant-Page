@@ -1,5 +1,5 @@
-import createNav from './header.js';
-import createContent from './content.js';
+import createNav from './header';
+import createContent from './content';
 
 const content = document.getElementById('content');
 content.classList.add('container', 'text-center', 'bg', 'pt-5');
@@ -24,18 +24,17 @@ content.appendChild(tabContent);
 const tabs = document.querySelectorAll('.nav-link');
 
 tabs.forEach((item, index) => {
-	item.addEventListener('click', (e) => {
-		tabs.forEach((it, i) => {
-			let ids = 'cont-' + it.id;
-			const pick = document.getElementById('cont-' + it.innerHTML.toLowerCase());
+  item.addEventListener('click', () => {
+    tabs.forEach((it, i) => {
+      const pick = document.getElementById(`cont-${it.innerHTML.toLowerCase()}`);
 
-			if (i === index) {
-				pick.classList.add('active');
-				it.classList.add('active');
-			} else {
-				pick.classList.remove('active');
-				it.classList.remove('active');
-			}
-		});
-	});
+      if (i === index) {
+        pick.classList.add('active');
+        it.classList.add('active');
+      } else {
+        pick.classList.remove('active');
+        it.classList.remove('active');
+      }
+    });
+  });
 });

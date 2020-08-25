@@ -1,62 +1,62 @@
 const createMenu = () => {
-	const menu = document.createElement('div');
-	menu.id = 'cont-menu';
-	menu.classList.add('tab-pane', 'show', 'fade');
+  const menu = document.createElement('div');
+  menu.id = 'cont-menu';
+  menu.classList.add('tab-pane', 'show', 'fade');
 
-	const deck = document.createElement('div');
-	deck.classList.add('card-deck', 'mt-5');
+  const deck = document.createElement('div');
+  deck.classList.add('card-deck', 'mt-5');
+  /* eslint-disable no-tabs */
+  const content = [
+    {
+      img: 'pizza',
+      title: 'Pizza Menu',
+      info:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      img: 'ham',
+      title: 'Hamburger Menu',
+      info:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      img: 'spag',
+      title: 'Spaghetti Menu',
+      info:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+  ];
+  /* eslint-enable no-tabs */
+  content.forEach((item) => {
+    const deckItem = document.createElement('div');
+    deckItem.classList.add('card');
 
-	const content = [
-		{
-			img: 'pizza',
-			title: 'Pizza Menu',
-			info:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-		},
-		{
-			img: 'ham',
-			title: 'Hamburger Menu',
-			info:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-		},
-		{
-			img: 'spag',
-			title: 'Spaghetti Menu',
-			info:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-		}
-	];
+    const itemImage = document.createElement('img');
+    itemImage.src = `./assets/image/${item.img}.jpg`;
+    itemImage.classList.add('card-img-top');
 
-	content.forEach((item, index) => {
-		var deckItem = document.createElement('div');
-		deckItem.classList.add('card');
+    const cardBody = document.createElement('div');
+    cardBody.classList.add('card-body');
 
-		var itemImage = document.createElement('img');
-		itemImage.src = './assets/image/' + item.img + '.jpg';
-		itemImage.classList.add('card-img-top');
+    const cardTitle = document.createElement('h5');
+    cardTitle.classList.add('card-title');
+    cardTitle.innerText = item.title;
 
-		var cardBody = document.createElement('div');
-		cardBody.classList.add('card-body');
+    const cardInfo = document.createElement('p');
+    cardInfo.classList.add('card-text');
+    cardInfo.innerText = item.info;
 
-		var cardTitle = document.createElement('h5');
-		cardTitle.classList.add('card-title');
-		cardTitle.innerText = item.title;
+    cardBody.appendChild(cardTitle);
+    cardBody.appendChild(cardInfo);
 
-		var cardInfo = document.createElement('p');
-		cardInfo.classList.add('card-text');
-		cardInfo.innerText = item.info;
+    deckItem.appendChild(itemImage);
+    deckItem.appendChild(cardBody);
 
-		cardBody.appendChild(cardTitle);
-		cardBody.appendChild(cardInfo);
+    deck.appendChild(deckItem);
+  });
 
-		deckItem.appendChild(itemImage);
-		deckItem.appendChild(cardBody);
-
-		deck.appendChild(deckItem);
-	});
-
-	menu.appendChild(deck);
-	return menu;
+  menu.appendChild(deck);
+  return menu;
 };
 
 export default createMenu;

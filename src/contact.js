@@ -1,7 +1,7 @@
 const createForm = () => {
 	const menu = document.createElement('div');
-	menu.id = 'nav-menu';
-	menu.classList.add('tab-pane', 'show', 'active', 'fade');
+	menu.id = 'cont-contact';
+	menu.classList.add('tab-pane', 'show', 'fade');
 
 	const form = document.createElement('form');
 

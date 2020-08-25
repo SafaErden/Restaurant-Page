@@ -1,7 +1,7 @@
 const createMenu = () => {
 	const menu = document.createElement('div');
-	menu.id = 'nav-menu';
-	menu.classList.add('tab-pane', 'show', 'fade', 'active');
+	menu.id = 'cont-menu';
+	menu.classList.add('tab-pane', 'show', 'fade');
 
 	const deck = document.createElement('div');
 	deck.classList.add('card-deck', 'mt-5');

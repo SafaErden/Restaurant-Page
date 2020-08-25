@@ -20,3 +20,22 @@ tabContent.appendChild(home);
 tabContent.appendChild(menu);
 tabContent.appendChild(contact);
 content.appendChild(tabContent);
+
+const tabs = document.querySelectorAll('.nav-link');
+
+tabs.forEach((item, index) => {
+	item.addEventListener('click', (e) => {
+		tabs.forEach((it, i) => {
+			let ids = 'cont-' + it.id;
+			const pick = document.getElementById('cont-' + it.innerHTML.toLowerCase());
+
+			if (i === index) {
+				pick.classList.add('active');
+				it.classList.add('active');
+			} else {
+				pick.classList.remove('active');
+				it.classList.remove('active');
+			}
+		});
+	});
+});

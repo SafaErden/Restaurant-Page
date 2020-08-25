@@ -17,7 +17,7 @@ const createNav = () => {
 	tabs.forEach((item, index) => {
 		var tabItem = document.createElement('a');
 		tabItem.id = '#nav-' + item.toLowerCase() + '-tab';
-		tabItem.href = '#nav-' + item.toLowerCase();
+		tabItem.href = 'javascript:void(0);';
 		tabItem.classList.add('nav-item', 'nav-link', 'font-weight-bold', 'h3');
 		if (index === 0) {
 			tabItem.classList.add('active');

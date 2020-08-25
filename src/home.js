@@ -1,6 +1,6 @@
 const createHome = () => {
 	const home = document.createElement('div');
-	home.id = 'nav-home';
+	home.id = 'cont-home';
 	home.classList.add('tab-pane', 'fade', 'show', 'active');
 
 	const firstInfo = document.createElement('h1');

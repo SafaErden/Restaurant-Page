@@ -10,7 +10,7 @@ A simple restaurant application built with HTML, CSS & Javascript.
     This project is part of the Microverse curriculum and is done as an exercise in the Javascript section.
     <br />
     <br />
-    <a href="https://rawcdn.githack.com/SafaErden/Project-Library/6cee52a4b024aa2be7038f1512d2b96b02475d75/index.html">View Demo</a>
+    <a href="https://safaerden.github.io/Restaurant-Page/">View Demo</a>
     ·
     <a href="https://github.com/SafaErden/Restaurant-Page/issues">Report Bug</a>
   </p>

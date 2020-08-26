@@ -16,7 +16,7 @@ A simple restaurant application built with HTML, CSS & Javascript.
   </p>
 </p>
 
-![screenshot](./dist/assets/image/safas.JPG)
+![screenshot](./dist/assets/image/safas.gif)
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents

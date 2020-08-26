@@ -1,0 +1,10 @@
+body {
+	height: 100vh;
+	background: url('../image/bg.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.nav-tabs {
+	background-color: #ffffff;
+}

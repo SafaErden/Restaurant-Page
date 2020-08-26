@@ -48,7 +48,13 @@ To use this app locally, this is what you need to:
   ```
     https://github.com/SafaErden/Restaurant-Page.git
   ```
+ for webpack run:
  
+ *npm run build*
+
+ *npm run start*
+
+
 
 ### Built With
 This project was built using these technologies.
